@@ -11,6 +11,26 @@ class StateResolverTest extends PHPUnit_Framework_TestCase {
 		$this->StateResolver = new \GetPhoto\L10n\StateResolver();
 	}
 
+	public function test_validateState_US_false() {
+		$actual = $this->StateResolver->validateState('US', 'US-QQ');
+		$this->assertFalse($actual);
+	}
+
+	public function test_validateState_US_true() {
+		$actual = $this->StateResolver->validateState('US', 'US-OK');
+		$this->assertTrue($actual);
+	}
+
+	public function test_validateState_ES_false() {
+		$actual = $this->StateResolver->validateState('ES', 'ES-QQ');
+		$this->assertFalse($actual);
+	}
+
+	public function test_validateState_ES_true() {
+		$actual = $this->StateResolver->validateState('ES', 'ES-M');
+		$this->assertTrue($actual);
+	}
+
 	public function test_getCountriesWithRequiredState() {
 		$countries = $this->StateResolver->getCountriesWithRequiredState();
 		$this->assertContains('US', $countries);

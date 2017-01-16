@@ -187,7 +187,7 @@ class StateResolver {
 	 * @param string $state
 	 * @return bool
 	 */
-	protected function validateState($country, $state) {
+	public function validateState($country, $state) {
 
 		// Return true if state is not required
 		$AddressFormatRepository = new \CommerceGuys\Addressing\Repository\AddressFormatRepository();
