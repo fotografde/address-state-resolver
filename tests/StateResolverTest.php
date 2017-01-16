@@ -11,6 +11,13 @@ class StateResolverTest extends PHPUnit_Framework_TestCase {
 		$this->StateResolver = new \GetPhoto\L10n\StateResolver();
 	}
 
+	public function test_getCountriesWithRequiredState() {
+		$countries = $this->StateResolver->getCountriesWithRequiredState();
+		$this->assertContains('US', $countries);
+		$this->assertContains('CA', $countries);
+		$this->assertContains('ES', $countries);
+	}
+
 	public function test_getState_US() {
 		if (getenv('CI')) {
 			$this->markTestSkipped('Can only run this test locally');
