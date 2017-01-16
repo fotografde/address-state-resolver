@@ -1,0 +1,5 @@
+/vendor
+composer.lock
+Würde .idea/ löschen
+Würde composer.lock löschen
+Würde vendor/ löschen
