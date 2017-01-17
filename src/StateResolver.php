@@ -131,7 +131,7 @@ class StateResolver {
 
 	/**
 	 * Countries with required state
-	 * @return [string]
+	 * @return string[]
 	 */
 	public function getCountriesWithRequiredState() {
 
