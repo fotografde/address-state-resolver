@@ -48,15 +48,13 @@ class StateResolver {
 		$response = null;
 		for ($i = 0; $i < 3; $i++) {
 			try {
-				$client = new \Guzzle\Http\Client([
+				$client = new \GuzzleHttp\Client([
 					'timeout'  => 2.0,
 				]);
 				/**
-				 * @var \Guzzle\Http\Message\Request $request
-				 * @var \Guzzle\Http\Message\Response $response
+				 * @var \GuzzleHttp\Psr7\Response $response
 				 */
-				$request = $client->get($url);
-				$response = $request->send();
+				$response = $client->get($url);
 			} catch(\Exception $e) {
 				continue;
 			}
