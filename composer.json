@@ -1,5 +1,5 @@
 {
-	"name": "GetPhoto/address-state-resolver",
+	"name": "fotografde/address-state-resolver",
 	"description": "Helper to resolve an address state after ZIP code and city",
 	"license": "MIT",
 	"version": "1.0.0",
